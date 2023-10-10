@@ -99,6 +99,11 @@ def card_check(enterbox_msg, enterbox_title, enterbox_fields, user_values=[]):
         if error:
             eg.msgbox(msg=error)
         else:
+            creature_dict[user_values[0]] = {"Strength": user_values[1],
+                                             "Speed": user_values[2],
+                                             "Stealth": user_values[3],
+                                             "Cunning": user_values[4]}
+
             return True, user_values
 
 
@@ -112,6 +117,7 @@ success, final_values = card_check(
     enterbox_msg="Add custom card (Stat values must be between 0 and 25.)",
     enterbox_title="Custom Card Creator",
 )
+print(creature_dict)
 
 
 

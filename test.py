@@ -104,7 +104,6 @@ def card_check(user_values, enterbox_msg,
             eg.msgbox(msg=error)
     return True, user_values
 
-
 def add_cards():
     enterbox_fields = ["Creature Name"]
     enterbox_values = ["Strength", "Speed", "Stealth", "Cunning"]
