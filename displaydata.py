@@ -1,5 +1,3 @@
-import easygui as eg
-
 creature_dict = {
     "Stoneling": {"Strength": 7, "Speed": 1, "Stealth": 25, "Cunning": 15},
     "Vexscream": {"Strength": 1, "Speed": 6, "Stealth": 21, "Cunning": 19},
@@ -13,20 +11,14 @@ creature_dict = {
     "Wispghoul": {"Strength": 17, "Speed": 19, "Stealth": 3, "Cunning": 2}
 }
 
-while True:
-    monsters = list(creature_dict.keys())  # Get a list of creature names
-    msg = "What card do you want to delete?"
 
-    try:
-        to_delete = eg.buttonbox(choices=monsters, msg=msg, title="Delete card")
+def display_data():
+    print("Creature name  Strength  Speed  Stealth  Cunning")
+    print()
 
-        if to_delete:
-            # Check if the user selected a creature (to avoid KeyError)
-            del creature_dict[to_delete]
-        else:
-            eg.msgbox(msg="No cards found in database")
-    except KeyError:
-        # Error message when the user tries to delete a card that's not in the dictionary
-        eg.msgbox(msg="Card not found in database")
+    for creature, attributes in creature_dict.items():
+        strength, speed, stealth, cunning = attributes.values()
+        print(f"{creature}\t\t{strength}\t\t{speed}\t\t{stealth}\t\t{cunning}")
 
 
+display_data()

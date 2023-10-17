@@ -1,9 +1,3 @@
-"""
-First version of the add cards module which allows users to
-add custom cards to the monster dictionary
-"""
-
-
 import easygui as eg
 # Dictionary
 creature_dict = {
@@ -68,14 +62,4 @@ creature_dict = {
         "Cunning": 2
     }
 }
-
-
-enterbox_fields = ["Creature Name"]
-enterbox_values = ["", "Strength", "", "Speed", "", "Stealth", "", "Cunning", ""]
-for num in range(0, 4):
-    current_stat = enterbox_values[(num * 2) + 1]
-    enterbox_fields.append(f"Stat")
-    enterbox_fields.append(f"{current_stat}")
-
-ok = eg.multenterbox(fields=enterbox_fields,
-                     msg="Add custom card (Dont change the default values)", values=enterbox_values)
+def

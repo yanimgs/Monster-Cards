@@ -132,6 +132,6 @@ def change_card(card_name, msg_=""):
 monsters = []
 for creature in creature_dict:
     monsters.append(creature)
-msg_ = "Please select a card to edit"
-to_search = eg.buttonbox(choices=monsters, msg=msg_, title="Monster search")
+msg = "Please select a card to edit"
+to_search = eg.buttonbox(choices=monsters, msg=msg, title="Monster search")
 change_output = change_card(card_name=to_search)

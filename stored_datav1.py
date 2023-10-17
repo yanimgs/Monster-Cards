@@ -14,5 +14,3 @@ for creature in creature_list:
     for power, value in creature.items():
         print(f"Power: {power},\t Value: {value}")
     print()
-
-
